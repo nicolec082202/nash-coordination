@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Distributed Learning for Autonomous Vehicles in
+    Communication-Constrained Environments">
+    <meta name="keywords" content="Keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Game-Theoretic Autonomous Vehicle Path Coordination with Limited
+        Communication
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <!-- <link rel="stylesheet" href="style.css"> --> 
+    <style>
+
+      .question-section {
+        margin: 2rem 0;
+        padding: 2rem;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+      }
+      .image-comparison {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .image-container {
+        flex: 1;
+        text-align: center;
+      }
+      .image-container img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .question-type {
+        margin-bottom: 1rem;
+      }
+      .author-block {
+        margin-right: 5px;
+      }
+      .author-equal {
+        font-size: 0.85em;
+        vertical-align: super;
+      }
+      .institution-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .institution-logo {
+        max-height: 80px;
+        width: auto;
+      }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">
+                    Game-Theoretic Autonomous Vehicle Path Coordination with Limited 
+                    Communication
+                </h1>
+                <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                        <a>Nicole Cruz</a><sup>1</sup><span class="author-equal">*</span>,
+                      </span>
+                    <span class="author-block">
+                        <a href="https://scholar.google.com/citations?user=w8-ptKYAAAAJ&amp;hl=en">Jose Fuentes</a><sup>1</sup><span class="author-equal">*</span>,
+                      </span>
+                  <span class="author-block">
+                    <a href="https://users.cis.fiu.edu/~jabobadi/">Leonardo Bobadilla</a><sup>1</sup>,
+                  </span>
+                </div>
+                
+                <div class="is-size-6 publication-institutions">
+                  <span class="author-block"><sup>1</sup> Florida International University</span>
+                </div>
+
+                <div class="is-size-7 publication-note mt-2">
+                    <span>* Equal contribution</span>
+                  </div>
+                
+                <!-- Institution Logos -->
+                <div class="institution-logos">
+                  <img src="assets/FIU Alone.png" alt="FIU Logo" class="institution-logo">
+                  <!--<img src="assets/lucid.jpg" alt="Lucid Logo" class="institution-logo" />-->
+                </div>
+                
+                <div class="column has-text-centered mt-4">
+                  <div class="publication-links">
+                    <!-- PDF Link. 
+                    <span class="link-block">
+                      <a href="https://ieeexplore.ieee.org/document/10711803" class="button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+                    <!-- Code Link. 
+                    <span class="link-block">
+                      <a href="https://github.com/trace-robotics/trace-robotics.github.io" class="button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                      </a>
+                    </span> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                    The coordination of autonomous vehicles in communication-constrained environments is 
+                    vital for tasks such as search and rescue, maritime surveillance, and disaster response. 
+                    Traditional path-planning approaches often rely on extensive communication to ensure 
+                    collision avoidance and optimal trajectory selection, which is not feasible in adversarial 
+                    or bandwidth-limited settings. This paper introduces a game-theoretic framework for multi-vehicle 
+                    coordination, leveraging Nash Equilibria and approximation algorithms to enable effective 
+                    decision-making with minimal communication overhead. We explore three limited communication 
+                    strategies: a ⅔-Well-Supported Nash Equilibrium (WSNE) algorithm, a ¾-WSNE algorithm, 
+                    and a proposed two-way communication extension based on the ¾-WSNE algorithm, dubbed 
+                    "¾-WSNE." These methods are evaluated using both simulated Voronoi roadmaps and 
+                    real-world experiments with Autonomous Surface Vehicles (ASVs). Our results demonstrate that strategic 
+                    path selection can be achieved with minimal information exchange while ensuring collision avoidance and 
+                    near-optimal path efficiency. This work contributes to the development of scalable, decentralized 
+                    coordination strategies for autonomous vehicles operating in communication-constrained environments. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Methodology</h2>
+                <div class="content has-text-justified">
+                    <p>This coordination framework for autonomous vehicles operates through a three-component process: (i) 
+                        Equilibrium Approximation, where agents utilize one of three communication-constrained game-theoretic 
+                        algorithms—¾-WSNE, Two-Way ¾-WSNE, or ⅔-WSNE—to compute near-optimal mixed strategies for path selection; 
+                        (ii) Strategic Path Selection, where agents construct roadmaps and payoff matrices accounting for collision 
+                        penalties and individual cost functions, then independently evaluate and select probabilistic paths 
+                        based on computed strategies; (iii) Communication-Aware Execution, where agents simulate or execute the 
+                        selected paths with minimal information exchange, balancing payoff maximization with safety and efficiency 
+                        in both simulated and real-world environments.
+                    </p>
+          <div class="box" style="margin-top: 2rem; text-align: center;">
+            <!-- Images Here-->
+            <div class="image-single">
+                <img src="assets/problem_formulation.png" alt="Problem Formulation">
+                <div class="caption">Two agents coordinating in a given environment.</div>
+              </div>
+            
+              <style>
+                .image-single {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  margin-top: 20px;
+                }
+                .image-single img {
+                  max-width: 100%;
+                  height: 450px;
+                }
+                .caption {
+                  margin-top: 8px;
+                  font-size: 14px;
+                  color: #555;
+                  text-align: center;
+                }
+                .box{
+                  padding: 10px 10px 10px 10px;
+                }
+              </style>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+          <h2 class="title is-3">Voronoi Roadmap Simulation</h2>
+          <div class="content has-text-justified">
+            <p>We first evaluate our coordination algorithms using Voronoi roadmap simulations in a 2D environment with multiple obstacles. Agents are assigned start and goal locations and must navigate through a shared roadmap while avoiding collisions and minimizing path cost. Each simulation is run under three communication-limited strategies: ¾-WSNE, Two-Way ¾-WSNE, and ⅔-WSNE. The ¾-WSNE approach, which involves no communication, often results in collisions due to random strategy selection. In contrast, the Two-Way ¾-WSNE allows limited information exchange, significantly reducing collision likelihood and improving path quality. The ⅔-WSNE algorithm, benefiting from slightly more communication, consistently produces paths that match or approximate the shortest collision-free solutions, highlighting the effectiveness of approximation equilibria in constrained environments.
+            </p>
+          <div class="box" style="margin-top: 2rem; text-align: center;">
+            <!-- Images Here-->
+            <div class="image-row">
+                <div class="image-column">
+                  <img src="assets/Voronoi-3:4.png" alt="Image 1">
+                  <div class="caption">3/4-WSNE Algorithm</div>
+                </div>
+                <div class="image-column">
+                  <img src="assets/Voronoi-two-way-3:4.png" alt="Image 2">
+                  <div class="caption">Two-Way 3/4-WSNE Algorithm</div>
+                </div>
+                <div class="image-column">
+                    <img src="assets/Voronoi-2:3.png" alt="Image 2">
+                    <div class="caption">2/3-WSNE Algorithm</div>
+                  </div>
+              </div>
+              <style>
+                .image-row {
+                  display: flex;
+                  justify-content: center;
+                  gap: 20px;
+                  margin-top: 20px;
+                }
+                .image-column {
+                  text-align: center;
+                }
+                .image-column img {
+                  max-width: 100%;
+                  height: auto;
+                }
+                .caption {
+                  margin-top: 8px;
+                  font-size: 14px;
+                  color: #555;
+                }
+              </style>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+          <h2 class="title is-3">Experimenal Videos</h2>
+          <div class="content has-text-justified">
+            <p>We validate our coordination framework through field tests using two Autonomous Surface Vehicles (ASVs) operating in a real-world aquatic environment. Each ASV is assigned start and goal positions on a predefined roadmap and executes paths based on strategies computed using the ¾-WSNE, Two-Way ¾-WSNE, and ⅔-WSNE algorithms. In the ¾-WSNE trials, limited decision-making due to lack of communication often leads to suboptimal or collision-prone paths. The Two-Way ¾-WSNE algorithm enables minimal information sharing, allowing agents to avoid collisions while navigating less efficient but safer routes. The ⅔-WSNE algorithm, which incorporates slightly more communication, produces consistently safe and more balanced paths for both agents. These results demonstrate the real-world viability of our game-theoretic coordination strategies under communication constraints.</p>
+            <div style="width:70%; margin: 0 auto;">
+                <!-- Video 1 -->
+                <div class="box" style="margin-top: 2rem;">
+                  <h3 class="title is-4 mt-3">3/4-WSNE Test</h3>
+                  <iframe src="https://www.youtube.com/embed/EBzcI5WSCMM" width="100%" height= "270px" style="border-radius: 8px">
+                  </iframe>
+                  <p></p>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="box" style="margin-top: 2rem;">
+                  <h3 class="title is-4 mt-3">Two-Way 3/4-WSNE Test</h3>
+                  <iframe src="https://www.youtube.com/embed/nn_qc9mrjic" width="100%" height= "270px" style="border-radius: 8px">
+                  </iframe>
+                  <p></p>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="box" style="margin-top: 2rem;">
+                  <h3 class="title is-4 mt-3">2/3-WSNE Test</h3>
+                  <iframe src="https://www.youtube.com/embed/W_79-sO8TaY" width="100%" height= "270px" style="border-radius: 8px">
+                  </iframe>
+                  <p></p>
+                </div>
+              </div>            
+        </div>
+      </section>
+
+</body>
+</html>
